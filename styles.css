@@ -46,6 +46,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 
+main { overflow-x: clip; }
 .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 .container-narrow { max-width: 760px; }
 
@@ -346,9 +347,34 @@ address { font-style: normal; margin-bottom: .6em; }
 }
 .mobile-cta.hidden { transform: translateY(140%); opacity: 0; pointer-events: none; }
 
-/* ----- Scroll reveal ----- */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
-.reveal.visible { opacity: 1; transform: none; }
+/* ----- Flowing hero blobs (morph + drift) ----- */
+.hero-blobs { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.blob {
+  position: absolute; display: block; filter: blur(40px); opacity: .75; will-change: transform, border-radius;
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+}
+.b1 { width: 380px; height: 380px; left: -120px; top: 40px; background: radial-gradient(circle at 30% 30%, #7FD1C5, #2A9D8F); opacity: .45; animation: morph 14s ease-in-out infinite, drift1 22s ease-in-out infinite; }
+.b2 { width: 320px; height: 320px; right: -110px; top: -40px; background: radial-gradient(circle at 60% 40%, #BFE6DF, #6FC3B6); opacity: .55; animation: morph 17s ease-in-out infinite reverse, drift2 26s ease-in-out infinite; }
+.b3 { width: 300px; height: 300px; left: 45%; bottom: -160px; background: radial-gradient(circle at 50% 50%, #F6E4CC, #EFD3B0); opacity: .8; animation: morph 20s ease-in-out infinite, drift3 24s ease-in-out infinite; }
+@keyframes morph {
+  0%, 100% { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; }
+  33% { border-radius: 63% 37% 41% 59% / 56% 62% 38% 44%; }
+  66% { border-radius: 37% 63% 55% 45% / 38% 46% 54% 62%; }
+}
+@keyframes drift1 { 0%, 100% { translate: 0 0; } 50% { translate: 60px 40px; } }
+@keyframes drift2 { 0%, 100% { translate: 0 0; } 50% { translate: -50px 60px; } }
+@keyframes drift3 { 0%, 100% { translate: 0 0; } 50% { translate: -70px -30px; } }
+
+/* Split-text pieces need to be inline-blocks to move */
+.hero h1 .w, .section-head h2 .w, .booking h2 .w { display: inline-block; }
+
+/* ----- Benefits ribbon (infinite marquee) ----- */
+.ribbon { background: var(--navy); color: #fff; overflow: hidden; padding: 18px 0; transform: rotate(-1.2deg); margin: -8px -10px 0; position: relative; z-index: 2; }
+.ribbon-track { display: flex; align-items: center; gap: 28px; width: max-content; animation: marquee 28s linear infinite; }
+.ribbon span { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; }
+.ribbon i { width: 12px; height: 12px; border-radius: 50%; background: var(--teal); flex: none; box-shadow: 0 0 0 5px rgba(42, 157, 143, .25); }
+.ribbon:hover .ribbon-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ===== Tablet ===== */
 @media (min-width: 640px) {
@@ -382,6 +408,5 @@ address { font-style: normal; margin-bottom: .6em; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
   .t-track { scroll-behavior: auto; }
 }

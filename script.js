@@ -182,26 +182,8 @@
     });
     watcher.observe(document.querySelector('.hero-actions'));
     watcher.observe(document.getElementById('book'));
-
-    // Gentle staggered fade-in
-    if (!reduceMotion) {
-      var revealer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('visible'); revealer.unobserve(en.target); }
-        });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.cards, .features, .t-track, .faq').forEach(function (group) {
-        Array.prototype.forEach.call(group.children, function (el, i) {
-          el.classList.add('reveal');
-          el.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
-          revealer.observe(el);
-        });
-      });
-      var bookingForm = document.querySelector('.booking-form');
-      bookingForm.classList.add('reveal');
-      revealer.observe(bookingForm);
-    }
   }
+  // Scroll animations live in animations.js
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

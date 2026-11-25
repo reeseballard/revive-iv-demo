@@ -39,6 +39,11 @@
     <!-- 1. Hero: centered, soft gradient wash, pill CTA -->
     <section class="hero">
       <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
       <div class="container hero-inner">
         <p class="pill-badge"><span class="dot" aria-hidden="true"></span> Now open in Canton, GA</p>
         <h1>Feel Better in <span class="accent">45&nbsp;Minutes</span></h1>
@@ -56,6 +61,14 @@
         </ul>
       </div>
     </section>
+
+    <!-- Flowing benefits ribbon -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>Hydration</span><i></i><span>Energy</span><i></i><span>Immunity</span><i></i><span>Recovery</span><i></i><span>Glow</span><i></i><span>Calm</span><i></i>
+        <span>Hydration</span><i></i><span>Energy</span><i></i><span>Immunity</span><i></i><span>Recovery</span><i></i><span>Glow</span><i></i><span>Calm</span><i></i>
+      </div>
+    </div>
 
     <!-- 2. Treatments: pricing-card style -->
     <section class="section" id="treatments">
@@ -353,6 +366,12 @@
 
   <a href="#book" class="mobile-cta hidden">Book Your Drip</a>
 
+  <!-- Animation libraries (free, loaded from a CDN; the site still works if they fail to load) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
+  <script src="animations.js" defer></script>
 </body>
 </html>
