@@ -37,9 +37,11 @@
     var h1 = document.querySelector('.hero h1');
     var heroTl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     if (window.SplitText) {
-      var split = new window.SplitText(h1, { type: 'words,chars', wordsClass: 'w' });
+      // The gradient "45 Minutes" stays whole so its React Bits gradient flows across it
+      var split = new window.SplitText(h1, { type: 'words,chars', wordsClass: 'w', ignore: '.accent' });
       gsap.set(h1, { perspective: 600 });
-      heroTl.from(split.chars, { opacity: 0, yPercent: 60, rotateX: -50, filter: 'blur(6px)', duration: 1, stagger: 0.022 }, 0.15);
+      heroTl.from(split.chars, { opacity: 0, yPercent: 60, rotateX: -50, filter: 'blur(6px)', duration: 1, stagger: 0.022 }, 0.15)
+        .from('.hero h1 .accent', { opacity: 0, yPercent: 40, scale: 0.9, filter: 'blur(10px)', duration: 1.2 }, 0.45);
     } else {
       heroTl.from(h1, { opacity: 0, y: 30, duration: 1 }, 0.15);
     }
