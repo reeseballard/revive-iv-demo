@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revive IV Lounge | IV Hydration in Canton, GA (Demo)</title>
   <meta name="description" content="Revive IV Lounge is a fictional IV hydration clinic in Canton, GA. A demo website by Reese Ballard.">
-  <meta name="theme-color" content="#2A9D8F">
+  <meta name="theme-color" content="#FAF7F2">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C16 3 6 14.5 6 20a10 10 0 0 0 20 0C26 14.5 16 3 16 3z' fill='%232A9D8F'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <div class="demo-banner" role="note">Demo website for a fictional business. Not a real clinic.</div>
 
   <header class="site-header" id="top">
@@ -21,7 +22,7 @@
         <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C16 3 6 14.5 6 20a10 10 0 0 0 20 0C26 14.5 16 3 16 3z"/></svg>
         <span>Revive <strong>IV Lounge</strong></span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
@@ -34,229 +35,283 @@
     </nav>
   </header>
 
-  <main>
-    <!-- 1. Hero -->
+  <main id="main">
+    <!-- 1. Hero: centered, soft gradient wash, pill CTA -->
     <section class="hero">
-      <div class="hero-shapes" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-        <span class="blob blob-3"></span>
-      </div>
+      <div class="hero-wash" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">IV Hydration &middot; Canton, GA</p>
-          <h1>Feel Better in 45&nbsp;Minutes</h1>
-          <p class="hero-sub">Relax in a calm, private lounge while our registered nurses deliver fluids, vitamins and electrolytes straight where your body needs them.</p>
-          <div class="hero-actions">
-            <a href="#book" class="btn btn-large">Book Your Drip</a>
-            <a href="#treatments" class="link-arrow">See treatments <span aria-hidden="true">&rarr;</span></a>
-          </div>
-          <ul class="hero-badges">
-            <li>RN-administered</li>
-            <li>Walk-ins welcome</li>
-            <li>Open 7 days</li>
-          </ul>
+        <p class="pill-badge"><span class="dot" aria-hidden="true"></span> Now open in Canton, GA</p>
+        <h1>Feel Better in <span class="accent">45&nbsp;Minutes</span></h1>
+        <p class="hero-sub">Sink into a heated recliner while a registered nurse delivers fluids, vitamins and electrolytes, right where your body needs them.</p>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-large">Book Your Drip
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+          </a>
+          <a href="#treatments" class="btn btn-ghost btn-large">See treatments</a>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 320 360" class="drip-illustration">
-            <defs>
-              <linearGradient id="bag" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ffffff"/>
-                <stop offset="1" stop-color="#E3F2EF"/>
-              </linearGradient>
-              <linearGradient id="fluid" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#5CC2B5"/>
-                <stop offset="1" stop-color="#2A9D8F"/>
-              </linearGradient>
-            </defs>
-            <circle cx="160" cy="180" r="150" fill="#E3F2EF"/>
-            <circle cx="160" cy="180" r="110" fill="#CFEAE5"/>
-            <rect x="152" y="18" width="16" height="22" rx="4" fill="#1D3557" opacity=".85"/>
-            <rect x="100" y="40" width="120" height="160" rx="28" fill="url(#bag)" stroke="#1D3557" stroke-opacity=".15" stroke-width="3"/>
-            <path d="M103 110 Q160 98 217 110 L217 172 Q217 197 192 197 L128 197 Q103 197 103 172 Z" fill="url(#fluid)"/>
-            <path d="M103 110 Q160 98 217 110" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3"/>
-            <rect x="122" y="60" width="40" height="6" rx="3" fill="#1D3557" opacity=".15"/>
-            <rect x="122" y="74" width="60" height="6" rx="3" fill="#1D3557" opacity=".1"/>
-            <rect x="152" y="200" width="16" height="22" rx="4" fill="#1D3557" opacity=".85"/>
-            <rect x="148" y="222" width="24" height="36" rx="8" fill="#fff" stroke="#1D3557" stroke-opacity=".2" stroke-width="3"/>
-            <circle class="drop" cx="160" cy="236" r="5" fill="#2A9D8F"/>
-            <path d="M160 258 C160 300 210 300 230 330" fill="none" stroke="#1D3557" stroke-opacity=".3" stroke-width="4" stroke-linecap="round"/>
-          </svg>
-        </div>
+        <ul class="trust-row" aria-label="Highlights">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>RN-administered</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Walk-ins welcome</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Open 7 days</li>
+        </ul>
       </div>
     </section>
 
-    <!-- 2. Treatments -->
+    <!-- 2. Treatments: pricing-card style -->
     <section class="section" id="treatments">
       <div class="container">
-        <div class="section-head">
+        <header class="section-head">
           <p class="eyebrow">Our Menu</p>
           <h2>Treatments</h2>
-          <p>Every drip starts with a quick health check by a registered nurse. Most sessions take 30 to 45 minutes.</p>
-        </div>
+          <p>Every drip starts with a quick health check by a registered nurse. Prices below are placeholders.</p>
+        </header>
         <div class="cards">
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2.5S5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-7-12.5-7-12.5z"/></svg>
+            <div class="card-top">
+              <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5S5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-7-12.5-7-12.5z"/></svg></span>
+              <span class="time">30 min</span>
             </div>
             <h3>Hydration</h3>
-            <p>Saline and electrolytes to rehydrate fast after travel, heat, a long week, or a stomach bug.</p>
-            <div class="card-foot"><span class="price">$99</span><span class="time">30 min</span></div>
+            <p class="card-desc">Rehydrate fast after travel, heat, a long week or a stomach bug.</p>
+            <p class="price"><span class="amount">$99</span> <span class="per">per session</span></p>
+            <ul class="checklist">
+              <li>1L saline</li>
+              <li>Electrolyte blend</li>
+            </ul>
+            <a href="#book" class="btn btn-outline btn-block" data-treatment="Hydration">Book Hydration</a>
           </article>
+
           <article class="card card-featured">
             <span class="tag">Most popular</span>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>
+            <div class="card-top">
+              <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></span>
+              <span class="time">45 min</span>
             </div>
             <h3>Myers' Cocktail</h3>
-            <p>A classic blend of B vitamins, vitamin C, magnesium and calcium for energy and overall wellness.</p>
-            <div class="card-foot"><span class="price">$149</span><span class="time">45 min</span></div>
+            <p class="card-desc">The classic blend for energy and all-around wellness.</p>
+            <p class="price"><span class="amount">$149</span> <span class="per">per session</span></p>
+            <ul class="checklist">
+              <li>B-complex &amp; B12</li>
+              <li>Vitamin C</li>
+              <li>Magnesium &amp; calcium</li>
+            </ul>
+            <a href="#book" class="btn btn-block" data-treatment="Myers' Cocktail">Book Myers'</a>
           </article>
+
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/></svg>
+            <div class="card-top">
+              <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/></svg></span>
+              <span class="time">40 min</span>
             </div>
             <h3>Immunity Boost</h3>
-            <p>High-dose vitamin C and zinc to support your body's defenses during cold and flu season.</p>
-            <div class="card-foot"><span class="price">$129</span><span class="time">40 min</span></div>
+            <p class="card-desc">Support your defenses during cold and flu season.</p>
+            <p class="price"><span class="amount">$129</span> <span class="per">per session</span></p>
+            <ul class="checklist">
+              <li>High-dose vitamin C</li>
+              <li>Zinc</li>
+            </ul>
+            <a href="#book" class="btn btn-outline btn-block" data-treatment="Immunity Boost">Book Immunity</a>
           </article>
+
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+            <div class="card-top">
+              <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+              <span class="time">45 min</span>
             </div>
             <h3>Recovery</h3>
-            <p>Fluids, amino acids and electrolytes to help muscles bounce back after a hard workout or race.</p>
-            <div class="card-foot"><span class="price">$139</span><span class="time">45 min</span></div>
+            <p class="card-desc">Help muscles bounce back after a hard workout or race.</p>
+            <p class="price"><span class="amount">$139</span> <span class="per">per session</span></p>
+            <ul class="checklist">
+              <li>Amino acids</li>
+              <li>Electrolytes</li>
+            </ul>
+            <a href="#book" class="btn btn-outline btn-block" data-treatment="Recovery">Book Recovery</a>
           </article>
         </div>
-        <p class="fine-print">Prices are placeholders for this demo.</p>
       </div>
     </section>
 
     <!-- 3. Why Choose Us -->
-    <section class="section section-tint" id="why">
+    <section class="section section-soft" id="why">
       <div class="container">
-        <div class="section-head">
+        <header class="section-head">
           <p class="eyebrow">The Revive Difference</p>
           <h2>Why Choose Us</h2>
-        </div>
+        </header>
         <div class="features">
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
-            </div>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg></span>
             <h3>Run by Registered Nurses</h3>
             <p>Every IV is placed and monitored by a licensed RN, with medical oversight on every treatment.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 18v-6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6h-2v2h-2v-2H8v2H6v-2zM7 6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1H7z"/></svg>
-            </div>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18v-6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6h-2v2h-2v-2H8v2H6v-2zM7 6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1H7z"/></svg></span>
             <h3>A Relaxing Lounge</h3>
             <p>Heated recliners, soft blankets, quiet music and free Wi-Fi. Bring a book or catch up on a show.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm1 5h-2v6l5 3 1-1.7-4-2.3z"/></svg>
-            </div>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm1 5h-2v6l5 3 1-1.7-4-2.3z"/></svg></span>
             <h3>Walk-Ins Welcome</h3>
-            <p>No appointment? No problem. Stop by during open hours, or book ahead to guarantee your chair.</p>
+            <p>No appointment? Stop by during open hours, or book ahead to guarantee your chair.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. Reviews -->
+    <!-- 4. Reviews: pastel testimonial cards (adapted from 21st.dev) -->
     <section class="section" id="reviews">
       <div class="container">
-        <div class="section-head">
+        <header class="section-head section-head-left">
           <p class="eyebrow">Sample Reviews</p>
           <h2>What Guests Say</h2>
-          <p class="sample-note">These are placeholder testimonials for demo purposes, not real customer reviews.</p>
+          <p>Placeholder testimonials for this demo, not real customer reviews. Tap a card to read it.</p>
+        </header>
+        <div class="t-track" id="t-track" role="group" aria-label="Sample reviews" tabindex="0">
+          <article class="t-card" style="--tone: #DCEFEA" data-name="Jordan M.">
+            <div class="t-top">
+              <span class="t-avatar" aria-hidden="true"></span>
+              <span class="t-rating"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6Z"/></svg>5/5</span>
+            </div>
+            <div class="t-id">
+              <div>
+                <p class="t-name">Jordan M.</p>
+                <p class="t-role">Sample review · Hydration</p>
+              </div>
+              <button class="t-toggle" type="button" aria-expanded="true" aria-controls="t-q1" aria-label="Hide Jordan's review">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+              </button>
+            </div>
+            <div class="t-panel" id="t-q1"><div><p>"I came in after a long trip feeling completely drained and walked out feeling like myself again. The nurses were so kind."</p></div></div>
+          </article>
+
+          <article class="t-card" style="--tone: #FFF1C9" data-name="Alex R.">
+            <div class="t-top">
+              <span class="t-avatar" aria-hidden="true"></span>
+              <span class="t-rating"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6Z"/></svg>5/5</span>
+            </div>
+            <div class="t-id">
+              <div>
+                <p class="t-name">Alex R.</p>
+                <p class="t-role">Sample review · Myers' Cocktail</p>
+              </div>
+              <button class="t-toggle" type="button" aria-expanded="false" aria-controls="t-q2" aria-label="Read Alex's review">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+              </button>
+            </div>
+            <div class="t-panel" id="t-q2"><div><p>"The lounge is so calm. Heated chair, a blanket and 45 minutes of quiet. I get the Myers' Cocktail every month now."</p></div></div>
+          </article>
+
+          <article class="t-card" style="--tone: #FDE3D0" data-name="Sam T.">
+            <div class="t-top">
+              <span class="t-avatar" aria-hidden="true"></span>
+              <span class="t-rating"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6Z"/></svg>5/5</span>
+            </div>
+            <div class="t-id">
+              <div>
+                <p class="t-name">Sam T.</p>
+                <p class="t-role">Sample review · Recovery</p>
+              </div>
+              <button class="t-toggle" type="button" aria-expanded="false" aria-controls="t-q3" aria-label="Read Sam's review">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+              </button>
+            </div>
+            <div class="t-panel" id="t-q3"><div><p>"Walked in on a Saturday after my half marathon with no appointment. In a chair within ten minutes. The Recovery drip was a game changer."</p></div></div>
+          </article>
         </div>
-        <div class="reviews">
-          <figure class="review">
-            <span class="sample-label">Sample review</span>
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <blockquote>"I came in after a long trip feeling completely drained and walked out feeling like myself again. The nurses were so kind."</blockquote>
-            <figcaption><span class="avatar" aria-hidden="true">J</span> Jordan M. <small>(placeholder)</small></figcaption>
-          </figure>
-          <figure class="review">
-            <span class="sample-label">Sample review</span>
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <blockquote>"The lounge is so calm. Heated chair, a blanket and 45 minutes of quiet. I get the Myers' Cocktail every month now."</blockquote>
-            <figcaption><span class="avatar" aria-hidden="true">A</span> Alex R. <small>(placeholder)</small></figcaption>
-          </figure>
-          <figure class="review">
-            <span class="sample-label">Sample review</span>
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <blockquote>"Walked in on a Saturday after my half marathon with no appointment. In a chair within ten minutes. Recovery drip was a game changer."</blockquote>
-            <figcaption><span class="avatar" aria-hidden="true">S</span> Sam T. <small>(placeholder)</small></figcaption>
-          </figure>
+        <div class="t-nav">
+          <button type="button" class="t-arrow" id="t-prev" aria-label="Previous reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"/></svg></button>
+          <button type="button" class="t-arrow" id="t-next" aria-label="Next reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button>
         </div>
       </div>
     </section>
 
-    <!-- 5. FAQ -->
-    <section class="section section-tint" id="faq">
+    <!-- 5. FAQ: smooth accordion -->
+    <section class="section section-soft" id="faq">
       <div class="container container-narrow">
-        <div class="section-head">
+        <header class="section-head">
           <p class="eyebrow">Questions</p>
           <h2>Frequently Asked</h2>
-        </div>
+        </header>
         <div class="faq">
-          <details>
-            <summary>Does IV therapy hurt?</summary>
-            <div class="faq-body"><p>Most guests feel a quick pinch when the small catheter goes in, then nothing at all. Our nurses are experienced at making it as comfortable as possible.</p></div>
-          </details>
-          <details>
-            <summary>How long does a session take?</summary>
-            <div class="faq-body"><p>Plan on about 45 minutes from check-in to check-out. The drip itself usually runs 30 to 45 minutes depending on the treatment.</p></div>
-          </details>
-          <details>
-            <summary>Do I need an appointment?</summary>
-            <div class="faq-body"><p>Walk-ins are always welcome. Booking ahead guarantees your chair, especially on weekends.</p></div>
-          </details>
-          <details>
-            <summary>Is IV hydration safe for me?</summary>
-            <div class="faq-body"><p>Before every treatment a registered nurse reviews your health history and checks your vitals. If a drip isn't right for you, we'll tell you and suggest alternatives.</p></div>
-          </details>
+          <div class="faq-item">
+            <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-1">Does IV therapy hurt?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-1"><div><p>Most guests feel a quick pinch when the small catheter goes in, then nothing at all. Our nurses are experienced at making it as comfortable as possible.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-2">How long does a session take?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-2"><div><p>Plan on about 45 minutes from check-in to check-out. The drip itself usually runs 30 to 45 minutes depending on the treatment.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3">Do I need an appointment?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-3"><div><p>Walk-ins are always welcome. Booking ahead guarantees your chair, especially on weekends.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4">Is IV hydration safe for me?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-4"><div><p>Before every treatment a registered nurse reviews your health history and checks your vitals. If a drip isn't right for you, we'll tell you and suggest alternatives.</p></div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Booking -->
+    <!-- 6. Booking: split layout (adapted from 21st.dev) -->
     <section class="section booking" id="book">
       <div class="container booking-inner">
         <div class="booking-text">
-          <p class="eyebrow eyebrow-light">Book Your Drip</p>
+          <p class="eyebrow">Book Your Drip</p>
           <h2>Reserve Your Chair</h2>
-          <p>Leave your name and number and we'll call you back to confirm a time. Prefer to just show up? Walk-ins are welcome.</p>
+          <p class="lead">Tell us when suits and we'll call you back the same day to confirm a time.</p>
+          <dl class="assurances">
+            <div>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
+              <dt>Nurse-led from start to finish</dt>
+              <dd>A quick health check before every drip.</dd>
+            </div>
+            <div>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
+              <dt>Same-day callback</dt>
+              <dd>We'll confirm your time by phone, no account needed.</dd>
+            </div>
+            <div>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
+              <dt>No pressure</dt>
+              <dd>Not sure which drip? Your nurse will help you choose.</dd>
+            </div>
+          </dl>
         </div>
+
         <form class="booking-form" id="booking-form" novalidate>
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
-            <span class="error" aria-live="polite"></span>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <span class="error" id="name-err" aria-live="polite"></span>
           </div>
           <div class="field">
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(770) 555-0123" required>
-            <span class="error" aria-live="polite"></span>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(770) 555-0123" required aria-describedby="phone-err">
+            <span class="error" id="phone-err" aria-live="polite"></span>
           </div>
+          <fieldset class="field">
+            <legend>Preferred day</legend>
+            <div class="day-chips">
+              <label><input type="radio" name="day" value="Monday" required><span>Mon</span></label>
+              <label><input type="radio" name="day" value="Tuesday"><span>Tue</span></label>
+              <label><input type="radio" name="day" value="Wednesday"><span>Wed</span></label>
+              <label><input type="radio" name="day" value="Thursday"><span>Thu</span></label>
+              <label><input type="radio" name="day" value="Friday"><span>Fri</span></label>
+              <label><input type="radio" name="day" value="Saturday"><span>Sat</span></label>
+              <label><input type="radio" name="day" value="Sunday"><span>Sun</span></label>
+            </div>
+            <span class="error" id="day-err" aria-live="polite"></span>
+          </fieldset>
           <div class="field">
-            <label for="day">Preferred day</label>
-            <select id="day" name="day" required>
-              <option value="">Choose a day</option>
-              <option>Monday</option>
-              <option>Tuesday</option>
-              <option>Wednesday</option>
-              <option>Thursday</option>
-              <option>Friday</option>
-              <option>Saturday</option>
-              <option>Sunday</option>
+            <label for="treatment">Treatment <span class="optional">(optional)</span></label>
+            <select id="treatment" name="treatment">
+              <option value="">Not sure yet</option>
+              <option>Hydration</option>
+              <option>Myers' Cocktail</option>
+              <option>Immunity Boost</option>
+              <option>Recovery</option>
             </select>
-            <span class="error" aria-live="polite"></span>
           </div>
           <button type="submit" class="btn btn-large btn-block">Request Appointment</button>
           <p class="form-note">Demo form. Nothing is sent or stored.</p>
@@ -277,12 +332,12 @@
         <p class="footer-tag">IV hydration and wellness in the heart of Canton.</p>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h2 class="footer-h">Visit</h2>
         <address>123 Placeholder St, Suite 100<br>Canton, GA 30114</address>
         <p><a href="tel:+17705550123">(770) 555-0123</a></p>
       </div>
       <div>
-        <h4>Hours</h4>
+        <h2 class="footer-h">Hours</h2>
         <ul class="hours">
           <li><span>Mon to Fri</span><span>9am to 7pm</span></li>
           <li><span>Saturday</span><span>9am to 5pm</span></li>
@@ -296,7 +351,7 @@
     </div>
   </footer>
 
-  <a href="#book" class="mobile-cta" aria-label="Book your drip">Book Your Drip</a>
+  <a href="#book" class="mobile-cta hidden">Book Your Drip</a>
 
   <script src="script.js" defer></script>
 </body>
